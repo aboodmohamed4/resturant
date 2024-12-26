@@ -1,0 +1,162 @@
+/* الخطوط والأساسيات */
+@import url(https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200..900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", serif;
+}
+
+body {
+    font-family: "Crimson Pro", serif;
+    padding-top: 70px; /* إضافة مسافة أعلى الصفحة لتجنب التداخل مع الترويسة */
+}
+
+/* ترويسة الصفحة */
+/* ترويسة الصفحة */
+header {
+    background-color: hsl(54, 40%, 57%);
+    width: 100%;
+    position: sticky; /* تعديل من fixed إلى sticky */
+    top: 0;  /* جعلها تلتصق في أعلى الصفحة */
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+}
+
+.logo {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    color: rgb(0, 5, 5);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover {
+    color: rgb(251, 255, 250);
+}
+
+/* قسم قائمة الوجبات */
+.menu {
+    padding: 50px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-item {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 1.6em;
+    color: rgb(50, 50, 50);
+}
+
+.menu-item p {
+    color: rgb(100, 100, 100);
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.menu-item .buy-btn {
+    background-color: #47cfe7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item .buy-btn:hover {
+    background-color: #2a9df4;
+}
+
+/* نموذج الطلب */
+.order-form {
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.order-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+}
+
+.order-form input,
+.order-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.order-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #47cfe7;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-form button:hover {
+    background-color: #2a9df4;
+}
