@@ -26,7 +26,6 @@
             <h3>الفطيرة الذهبية</h3>
             <p>صدور الفراخ بالقشطة</p>
             <p><strong>السعر:</strong>200 جنيه</p>
-            <button class="buy-btn" onclick="addToCart('الفطيرة الذهبية', 200)">شراء</button>
         </div>
         <!-- الصنف الثاني -->
         <div class="menu-item">
@@ -34,7 +33,6 @@
             <h3>المقلوبة</h3>
             <p>أرز بسمتي بالفراخ</p>
             <p><strong>السعر:</strong> 500 جنيه</p>
-            <button class="buy-btn" onclick="addToCart('المقلوبة', 500)">شراء</button>
         </div>
         <!-- الصنف الثالث -->
         <div class="menu-item">
@@ -42,7 +40,6 @@
             <h3>شاورما الدجاج</h3>
             <p>شاورما دجاج مع البطاطس</p>
             <p><strong>السعر:</strong> 120 جنيه</p>
-            <button class="buy-btn" onclick="addToCart('شاورما الدجاج', 100)">شراء</button>
         </div>
         <!-- الصنف الرابع -->
         <div class="menu-item">
@@ -50,7 +47,6 @@
             <h3>الفطيرة التركية</h3>
             <p>لحمة مفرومة بالذرة</p>
             <p><strong>السعر:</strong> 80 جنيه</p>
-            <button class="buy-btn" onclick="addToCart('كباب مشوي', 150)">شراء</button>
         </div>
         <!-- الصنف الخامس -->
         <div class="menu-item">
@@ -58,7 +54,6 @@
             <h3>صفيحة الفلافل</h3>
             <p>فلافل بالطريقة الفلسطينية</p>
             <p><strong>السعر:</strong> 40 جنيه</p>
-            <button class="buy-btn" onclick="addToCart('منسف', 250)">شراء</button>
         </div>
         <!-- الصنف السادس -->
         <div class="menu-item">
@@ -66,7 +61,6 @@
             <h3>الخبز الفلسطيني</h3>
             <p>الخبز الفلسطيني الاصيل</p>
             <p><strong>السعر:</strong> 4 جنيه</p>
-            <button class="buy-btn" onclick="addToCart('محمرة', 30)">شراء</button>
         </div>
         <!-- الصنف السابع -->
         <div class="menu-item">
@@ -74,7 +68,6 @@
             <h3>فتوش</h3>
             <p>سلطة فتوش طازجة</p>
             <p><strong>السعر:</strong> 50 جنيه</p>
-            <button class="buy-btn" onclick="addToCart('فتوش', 50)">شراء</button>
         </div>
         <!-- الصنف الثامن -->
         <div class="menu-item">
@@ -82,7 +75,6 @@
             <h3>التايلندي</h3>
             <p>ساندوتش الدجاج الخلطة السحرية</p>
             <p><strong>السعر:</strong> 120 جنيه</p>
-            <button class="buy-btn" onclick="addToCart('ورق عنب', 120)">شراء</button>
         </div>
         <!-- الصنف التاسع -->
         <div class="menu-item">
@@ -90,7 +82,6 @@
             <h3>طاجن القرنبيط</h3>
             <p>طاجن الزهرة اللذيذ</p>
             <p><strong>السعر:</strong> 50 جنيه</p>
-            <button class="buy-btn" onclick="addToCart('كنافة', 50)">شراء</button>
         </div>
         <!-- الصنف العاشر -->
         <div class="menu-item">
@@ -98,49 +89,28 @@
             <h3>طاجن الكوسا</h3>
             <p>طاجن الكوسا باللحمة المفرومة</p>
             <p><strong>السعر:</strong> 45 جنيه</p>
-            <button class="buy-btn" onclick="addToCart('عصير طبيعي', 30)">شراء</button>
         </div>
     </div>
 </section>
 
-<!-- نموذج طلب -->
-<section class="order-form">
-    <h2>إتمام الطلب</h2>
-    <form id="orderForm">
-        <label for="customerName">اسم العميل:</label>
-        <input type="text" id="customerName" required>
-        <label for="customerPhone">رقم الهاتف:</label>
-        <input type="tel" id="customerPhone" required>
-        <label for="orderDetails">تفاصيل الطلب:</label>
-        <textarea id="orderDetails" readonly></textarea>
-        <button type="submit">إرسال الطلب</button>
-    </form>
-</section>
-
 <footer class="text-center text-lg-start text-white" style="background-color: #3e4551;">
-
     <div class="container p-3 pb-0">
         <section class="mb-1 text-center">
             <!-- Github -->
             <a class="btn btn-outline-light btn-floating m-1" href="#" role="button">
                 <i class="fab fa-github"></i></a>
-
             <!-- Linkedin -->
             <a class="btn btn-outline-light btn-floating m-1" href="#" role="button">
                 <i class="fab fa-linkedin-in"></i></a>
-
             <!-- Instagram -->
             <a class="btn btn-outline-light btn-floating m-1" href="#" role="button">
                 <i class="fab fa-instagram"></i></a>
         </section>
     </div>
-
-    <!-- Copyright -->
     <div class="text-center pb-0" style="background-color: rgba(255, 255, 255, 0.2)">
         <span>&copy; <span id="footerDate"></span> تم تصميم هذه الصفحة بواسطة المبرمج عبود محمد:</span>
         <a class="text-white" href="#">...</a>
     </div>
-
 </footer>
 
 <script src="script.js"></script>

@@ -1,35 +1,32 @@
-let cart = []; // مصفوفة لحفظ الطلبات
+document.getElementById('orderForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-function addToCart(item, price) {
-    // إضافة العنصر إلى سلة الشراء
-    cart.push({ item, price });
-    updateOrderDetails();
-}
-
-function updateOrderDetails() {
-    const orderDetails = document.getElementById('orderDetails');
-    orderDetails.value = cart.map(item => `${item.item} - ${item.price} جنيه`).join('\n');
-}
-
-const orderForm = document.getElementById('orderForm');
-orderForm.addEventListener('submit', function (e) {
-    e.preventDefault(); // منع إرسال النموذج بشكل افتراضي
     const customerName = document.getElementById('customerName').value;
     const customerPhone = document.getElementById('customerPhone').value;
-    const orderDetails = document.getElementById('orderDetails').value;
+    const orderDetails = JSON.stringify(cart); // بيانات العربة
 
-    const order = {
+    const orderData = {
         customerName,
         customerPhone,
-        orderDetails,
-        date: new Date().toLocaleString(),
+        orderDetails
     };
 
-    // حفظ الطلب (هنا يمكن حفظه في ملف أو قاعدة بيانات)
-    console.log('تم إرسال الطلب:', order);
-
-    // مسح سلة الشراء بعد إرسال الطلب
-    cart = [];
-    updateOrderDetails();
-    alert('تم إرسال طلبك بنجاح!');
+    // إرسال البيانات إلى Zapier Webhook
+    fetch('https://hooks.zapier.com/hooks/catch/YOUR_WEBHOOK_URL/', {
+        method: 'POST',
+        body: JSON.stringify(orderData),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('تم إرسال الطلب بنجاح!');
+        cart = []; // تفريغ عربة التسوق
+        document.getElementById('orderForm').reset(); // إعادة تعيين النموذج
+    })
+    .catch((error) => {
+        console.log('خطأ:', error);
+        alert('حدث خطأ أثناء إرسال الطلب.');
+    });
 });
